@@ -15,9 +15,7 @@ pub fn part1() {
 }
 
 fn calc_score(a: &str, x: &str) -> i32 {
-    let score = calc_value(x) + calc_result(a, x);
-    println!("{}", calc_result(a,x));
-    score
+    calc_value(x) + calc_result(a, x)
 }
 
 fn calc_value(x: &str) -> i32 {
