@@ -5,13 +5,13 @@ pub fn part1() {
     let content = fs::read_to_string(path).unwrap();
     let l: Vec<char> = content.chars().collect();
     let mut n = 0;
-    for x in 0..l.len()-4 {
-        if unique(&content[x..x+4]) {
+    for x in 0..l.len()-14 {
+        if unique(&content[x..x+14]) {
             break;
         }
         n += 1;
     }
-    print!("{}", n+4);
+    print!("{}", n+14);
 }
 
 fn unique(s: &str) -> bool {
